@@ -1,5 +1,5 @@
 # CRMSystem
-**user ruthevil-blog-system's server and database**
+**user ruthevil-blog-system's server and database，https://github.com/Ruthevil/ruthevil-blog-system**
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
