@@ -1,0 +1,61 @@
+.header-wrap{
+    display: flex;
+    background-color: #1b2637;
+    color: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-wrap{
+    width: 12%;
+}
+.text-blue{
+    color: #0066ff;
+}
+.left-wrap{
+    flex-basis: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header-wrap i{
+    color: #0066ff;
+}
+.right-manage{
+}
+.right-manage,
+.user-manage,
+.system-log{
+    font-size: 14px;
+}
+.right-wrap{
+    flex-basis: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.online-user-wrap i{
+    color: #25841b;
+}
+.online-num,
+.online-user,
+.system-info,
+.user{
+    font-size: 12px;
+}
+.online-num{
+}
+.online-user{
+    margin-left: 5px;
+}
+.right-manage-wrap,
+.user-manage-wrap,
+.system-log-wrap,
+.system-info-wrap{
+    cursor: pointer;
+}
+.system-info{
+    margin-left: 5px;
+}
+.user{
+    margin-left: 5px;
+    color: #ffffff;
+}
+

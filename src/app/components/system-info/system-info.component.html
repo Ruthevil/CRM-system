@@ -1,0 +1,20 @@
+<div class="system-log-detail-template">
+    <div class="header-wrap"><div class="header-title">系统消息详情</div></div>
+    <div class="content-wrap">
+        <div class="item-log" *ngFor="let itemLog of logDetailList">
+            <p class="title">
+                <span class="text">{{itemLog.title}}</span>
+                <span class="time">{{itemLog.time}}</span></p>
+            <div class="item-content">
+                <p class="item-title">{{itemLog.bodyTitle}}</p>
+                <div class="item-body">{{itemLog.content}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="pages-wrap">
+        <el-pagination [total]="logDetailPagination.totalCount" [model]="logDetailPagination.currentPage"
+                       [page-size]="logDetailPagination.pageSize" [page-count]="logDetailPagination.pageCount"
+                       [page-sizes]="logDetailPagination.pageSizes" [layout]="logDetailPagination.layOut">
+        </el-pagination>
+    </div>
+</div>

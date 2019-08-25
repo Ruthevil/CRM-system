@@ -1,0 +1,65 @@
+<div class="contract-info-page">
+    <div class="header-wrap">
+        <div class="header-title">联系人信息列表</div>
+        <div class="operate-wrap">
+            <div class="left-wrap">
+                <el-button size="small" (click)="toggleNewContractPage()">新增联系人</el-button>
+                <el-button size="small" (click)="toggleOrganizationPage()">机构信息</el-button>
+            </div>
+            <div class="right-wrap">
+        <span class="input">
+          <el-input [model]="inputContractValue" placeholder="请输入关键字" size="mini"></el-input>
+        </span>
+                <span class="select">
+          <el-select [model]="selectContractValue" size="mini">
+            <el-option *ngFor="let item of selectContractArr" [label]="item.label" [value]="item.value">
+            </el-option>
+          </el-select>
+        </span>
+                <el-button size="small" (click)="searchContract()">查询</el-button>
+            </div>
+        </div>
+    </div>
+    <div class="table-wrap">
+        <el-table [model]="contractTableData" [stripe]="true" [border]="true" [center]="contractTableCenter" [scroll-x]="false">
+            <el-table-column label="□" width="40">
+                <ng-template #slot let-scope="scope">
+                    <el-checkbox [model]="" (click)="selectContract(scope)"></el-checkbox>
+                </ng-template>
+            </el-table-column>
+            <el-table-column model-key="bh" label="编号" width="95">
+            </el-table-column>
+            <el-table-column model-key="jgmc" label="机构名称" width="300">
+            </el-table-column>
+            <el-table-column model-key="xm" label="姓名" width="85">
+            </el-table-column>
+            <el-table-column model-key="xb" label="性别" width="60">
+            </el-table-column>
+            <el-table-column model-key="zw" label="职务" width="85">
+            </el-table-column>
+            <el-table-column model-key="sj" label="手机" width="150">
+            </el-table-column>
+            <el-table-column model-key="bgdh" label="办公电话" width="150">
+            </el-table-column>
+            <el-table-column model-key="zydj" label="重要等级" width="85">
+            </el-table-column>
+            <el-table-column model-key="gjzt" label="跟进状态" width="85">
+            </el-table-column>
+            <el-table-column label="操作" width="160">
+                <ng-template #slot let-scope="scope">
+                    <el-button type="text" size="small" (click)="toggleEditContractPage(scope)">编辑</el-button>
+                    <el-button type="text" size="small" (click)="deleteContract(scope)">删除</el-button>
+                    <el-button type="text" size="small" (click)="toggleLookContractPage(scope)">查看</el-button>
+                </ng-template>
+            </el-table-column>
+        </el-table>
+    </div>
+    <div class="pages-wrap">
+        <el-pagination [total]="contractPagination.totalCount" [model]="contractPagination.currentPage"
+                       [page-size]="contractPagination.pageSize" [page-count]="contractPagination.pageCount"
+                       [page-sizes]="contractPagination.pageSizes" [layout]="contractPagination.layOut">
+        </el-pagination>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

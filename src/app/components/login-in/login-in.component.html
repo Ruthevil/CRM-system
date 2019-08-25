@@ -1,0 +1,22 @@
+<div class="login-in-template">
+    <p class="system-name">客户资源管理系统CRM</p>
+    <div class="login-body">
+        <p class="username">
+            <span class="key">用户名：</span>
+            <span class="input">
+                <input placeholder="请输入用户名" type="text" (change)="getUsername($event)" autofocus="autofocus" (keyup.enter)="handleLogin()">
+                <span class="fa fa-user icon"></span>
+            </span>
+        </p>
+        <p class="password">
+            <span class="key">密&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+            <span class="input">
+                <input placeholder="请输入密码" (change)="getPassword($event)" (keyup.enter)="handleLogin()">
+                <span class="fa fa-lock icon"></span>
+            </span>
+        </p>
+    </div>
+    <p class="login-footer">
+        <button type="primary" (click)="handleLogin()">登录</button>
+    </p>
+</div>

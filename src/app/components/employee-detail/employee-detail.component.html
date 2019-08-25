@@ -1,0 +1,39 @@
+<div class="employee-detail-page">
+    <div class="header-wrap">
+        <div class="header-title">员工信息详情</div>
+        <div class="header-follow">
+            <span class="title">员工基本信息</span>
+            <span class="info">注：带有*为必填项</span>
+        </div>
+    </div>
+    <div class="body-wrap">
+        <p class="bm"><span class="key">部门：</span><span class="value">{{bm}}</span></p>
+        <p class="ygxm"><span class="key">员工姓名：</span><span class="value">{{ygxm}}</span></p>
+        <p class="yggh"><span class="key">员工工号：</span><span class="value">{{yggh}}</span></p>
+        <p class="gwmc"><span class="key">岗位名称：</span><span class="value">{{gwmc}}</span></p>
+        <p class="gwzz"><span class="key">岗位职责：</span><span class="value">{{gwzz}}</span></p>
+        <p class="sex"><span class="key">性别：</span><span class="value">{{sex}}</span></p>
+        <p class="gzdh"><span class="key">工作电话：</span><span class="value">{{gzdh}}</span></p>
+        <p class="sjhm"><span class="key">手机号码：</span><span class="value">{{sjhm}}</span></p>
+        <p class="email"><span class="key">邮箱：</span><span class="value">{{email}}</span></p>
+        <p class="gzqq"><span class="key">工作QQ：</span><span class="value">{{gzqq}}</span></p>
+        <p class="dh"><span class="key">短号：</span><span class="value">{{dh}}</span></p>
+        <p class="zwjb"><span class="key">职位级别：</span><span class="value">{{zwjb}}</span></p>
+        <p class="zwlb"><span class="key">职务类别：</span><span class="value">{{zwlb}}</span></p>
+        <p class="ygzt"><span class="key">员工状态：</span><span class="value">{{ygzt}}</span></p>
+        <p class="zwzt"><span class="key">职位状态：</span><span class="value">{{zwzt}}</span></p>
+        <p class="sjkh">
+            <span class="key">商机客户：</span>
+            <span class="value" *ngIf="sjkh"><span class="count">{{sjkh}}</span>个</span>
+        </p>
+        <p class="fpzt">
+            <span class="key">分配状态：</span>
+            <span class="value">{{fpzt}}</span>
+            <span class="fp-count" *ngIf="fpCount"><span class="count">{{fpCount}}</span>个客户</span>
+        </p>
+        <p class="bz"><span class="key">备注：</span><span class="value">{{bz}}</span></p>
+    </div>
+    <div class="footer-wrap">
+        <el-button class="detail-close-btn">关闭</el-button>
+    </div>
+</div>

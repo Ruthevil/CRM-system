@@ -1,0 +1,61 @@
+<div class="library-manage-page">
+    <div class="header-wrap">
+        <div class="header-title">资料库信息列表</div>
+        <div class="operate-wrap">
+            <div class="left-wrap">
+                <el-button size="small" (click)="toggleNewLibrary()">新增资料</el-button>
+            </div>
+            <div class="right-wrap">
+        <span class="input">
+          <el-input [model]="inputLibraryValue" placeholder="请输入关键字" size="mini"></el-input>
+        </span>
+                <span class="select">
+          <el-select [model]="selectLibraryValue" size="mini">
+            <el-option *ngFor="let item of selectLibraryArr" [label]="item.label" [value]="item.value">
+            </el-option>
+          </el-select>
+        </span>
+                <el-button size="small" (click)="searchLibrary()">查询</el-button>
+            </div>
+        </div>
+    </div>
+    <div class="table-wrap">
+        <el-table [model]="libraryTableData" [stripe]="true" [border]="true" [center]="libraryTableCenter" [scroll-x]="false">
+            <el-table-column label="□" width="40">
+                <ng-template #slot let-scope="scope">
+                    <el-checkbox [model]="" (click)="selectLibrary(scope)"></el-checkbox>
+                </ng-template>
+            </el-table-column>
+            <el-table-column model-key="bh" label="编号" width="90">
+            </el-table-column>
+            <el-table-column model-key="libraryName" label="资料名称" width="360">
+            </el-table-column>
+            <el-table-column model-key="librarySpilt" label="资料分类" width="100">
+            </el-table-column>
+            <el-table-column model-key="publicPerson" label="发布者" width="100">
+            </el-table-column>
+            <el-table-column model-key="publicDate" label="发布日期" width="150">
+            </el-table-column>
+            <el-table-column model-key="updateDate" label="更新日期" width="150">
+            </el-table-column>
+            <el-table-column model-key="downloadCount" label="下载" width="130">
+                <ng-template #slot let-scope="scope">
+                    <span class="download-text">下载</span><span class="download-count">{{scope.downloadCount}}</span>次
+                </ng-template>
+            </el-table-column>
+            <el-table-column label="操作" width="145">
+                <ng-template #slot let-scope="scope">
+                    <el-button type="text" size="small" (click)="toggleEditLibraryPage(scope)">编辑</el-button>
+                    <el-button type="text" size="small" (click)="deleteLibrary(scope)">删除</el-button>
+                    <el-button type="text" size="small" (click)="toggleLookLibraryPage(scope)">查看</el-button>
+                </ng-template>
+            </el-table-column>
+        </el-table>
+    </div>
+    <div class="pages-wrap">
+        <el-pagination [total]="libraryPagination.totalCount" [model]="libraryPagination.currentPage"
+                       [page-size]="libraryPagination.pageSize" [page-count]="libraryPagination.pageCount"
+                       [page-sizes]="libraryPagination.pageSizes" [layout]="libraryPagination.layOut">
+        </el-pagination>
+    </div>
+</div>

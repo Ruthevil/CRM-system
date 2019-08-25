@@ -1,0 +1,64 @@
+.header-wrap{
+    height: 115px;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header-wrap .header-title{
+    text-align: center;
+}
+.header-wrap .header-follow{
+    display: flex;
+    justify-content: space-between;
+}
+.header-wrap .header-follow .info{
+    color: #c6c6c6;
+}
+.form-input-wrap{
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.form-input-wrap .content-wrap{
+    margin-bottom: 20px;
+}
+.form-input-wrap .user-authority-set{
+    margin-bottom: 20px;
+}
+.form-input-wrap .user-authority-set .set-title{
+    height: 40px;
+    line-height: 40px;
+    color: #333333;
+    font-size: 14px;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 0;
+}
+.form-input-wrap .user-authority-set .set-content{
+    padding-top: 10px;
+    display: flex;
+    padding-left: 20px;
+}
+.form-input-wrap .user-authority-set .set-content .column-authority,
+.form-input-wrap .user-authority-set .set-content .function-authority{
+    margin: 0;
+}
+.form-input-wrap .user-authority-set .set-content .left-wrap,
+.form-input-wrap .user-authority-set .set-content .right-wrap{
+    width: 50%;
+}
+.form-input-wrap .user-authority-set .key{
+    color: #868686;
+}
+.form-input-wrap .user-authority-set .value{
+    color: #bcbcbc;
+    margin-left: 20px;
+}
+.form-input-wrap .user-authority-set .content{
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px dashed #d7d7d7;
+}
+.form-input-wrap .user-authority-set .content .all-select{
+    margin: 0;
+}

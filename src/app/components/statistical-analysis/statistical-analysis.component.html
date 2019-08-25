@@ -1,0 +1,35 @@
+<div class="statical-analysis-template">
+    <div class="statical-analysis-title">统计分析数据</div>
+    <div class="data-btn-wrap">
+        <el-button>业务数据</el-button>
+        <el-button>产品销售数据</el-button>
+        <el-button>销售执行力</el-button>
+        <el-button>销售业绩</el-button>
+        <el-button>销售形势预测</el-button>
+    </div>
+    <div class="statical-graph-wrap">
+        <div class="selectDataType">
+            <el-select [model]="dataTypeArr[0].value">
+                <el-option *ngFor="let item of dataTypeArr" [label]="item.label" [value]="item.value">
+                </el-option>
+            </el-select>
+        </div>
+        <div echarts [options] = "linkOption" [loading]="showLoading" class="demo-chart"></div>
+    </div>
+    <div class="statical-table">
+        <el-table [model]="tableData" [stripe]="true" [border]="true" [center]="tableCenter" [scroll-x]="false">
+            <el-table-column model-key="month" label="月份" width="120">
+            </el-table-column>
+            <el-table-column model-key="jgCount" label="机构数量" width="120">
+            </el-table-column>
+            <el-table-column model-key="sjCount" label="商机数量" width="120">
+            </el-table-column>
+            <el-table-column model-key="htCount" label="合同数量" width="120">
+            </el-table-column>
+            <el-table-column model-key="rzCount" label="日志数量" width="120">
+            </el-table-column>
+            <el-table-column model-key="rwCount" label="任务数量" width="120">
+            </el-table-column>
+        </el-table>
+    </div>
+</div>

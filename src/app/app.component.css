@@ -1,0 +1,15 @@
+#crm-container{
+    height: -webkit-fill-available;
+    overflow: hidden;
+}
+#crm-aside{
+    width: 220px!important;
+    background-color: #1b2637;
+    overflow: auto;
+    height: -webkit-fill-available;
+    padding-bottom: 70px;
+}
+#crm-main{
+    height: -webkit-fill-available;
+    overflow: auto;
+}

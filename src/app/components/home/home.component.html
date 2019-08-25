@@ -1,0 +1,45 @@
+<div class="home-template">
+    <div class="total-count-wrap">
+        <div class="total-count-item" *ngFor="let item of totalCount">
+            <span [class]="item.icon"></span>
+            <span class="name">{{item.name}}</span>
+            <span class="num">{{item.num}}</span>
+        </div>
+    </div>
+    <div class="today-count-wrap">
+        <div class="today-count-item" *ngFor="let item of todayCount">
+            <span [class]="item.icon"></span>
+            <span class="content">
+        <span class="num">{{item.num}}</span>
+        <span class="name">{{item.name}}</span>
+      </span>
+        </div>
+    </div>
+    <div class="total-to-do-wrap">
+        <div class="total-to-do-title">
+            总代办事项
+        </div>
+        <div class="total-to-do-list">
+            <div class="total-to-do-item" *ngFor="let item of totalToDoList">
+                <span [class]="item.icon"></span>
+                <span class="content">
+          <span class="name">{{item.name}}</span>
+          <span class="num">{{item.num}}</span>
+        </span>
+            </div>
+        </div>
+    </div>
+    <div class="today-to-do-wrap">
+        <div class="today-to-do-item" *ngFor="let itemType of todayToDoList">
+            <span [class]="itemType.icon"></span>
+            <span class="task-type-title">今日{{itemType.typeName}}共<span>({{itemType.totalCount}})</span>{{itemType.type}}</span>
+            <div class="today-type-wrap">
+        <span class="task-type-item" *ngFor="let item of itemType.typeList">
+          <span class="name">{{item.name}}</span>
+          <span class="num">{{item.num}}</span>
+          <span class="type">{{itemType.type}}</span>
+        </span>
+            </div>
+        </div>
+    </div>
+</div>

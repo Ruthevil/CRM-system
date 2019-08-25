@@ -1,0 +1,73 @@
+.system-docking-manage{
+    padding-bottom: 100px;
+}
+.header-wrap{
+    height: 115px;
+    text-align: center;
+    font-weight: 600;
+    color: #333333;
+}
+.body-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.body-wrap .task-system-wrap,
+.body-wrap .done-system-wrap,
+.body-wrap .oa-system-wrap,
+.body-wrap .organization-system-wrap{
+    border: 1px solid #e4e4e4;
+    padding: 15px;
+    height: 355px;
+    width: 490px;
+    margin: 10px 0;
+}
+.body-wrap .docking-wrap{
+    height: 210px;
+    border-bottom: 1px dashed #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.body-wrap .organization-system-wrap .docking-wrap{
+    border-bottom: 0;
+}
+.body-wrap .title{
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+}
+.body-wrap .docking-wrap .username,
+.body-wrap .docking-wrap .password,
+.body-wrap .docking-wrap .btn{
+    text-align: center;
+    margin-bottom: 0;
+}
+.body-wrap .docking-wrap .key{
+    width: 65px;
+    display: inline-block;
+    text-align: right;
+}
+.body-wrap .docking-wrap .value{
+    width: 332px;
+    height: 25px;
+}
+.body-wrap .search-wrap{
+    margin-top: 20px;
+}
+.body-wrap .search-wrap .content{
+    display: flex;
+    justify-content: center;
+}
+.body-wrap .search-wrap .content .key-word{
+    width: 204px;
+    height: 25px;
+}
+.body-wrap .search-wrap .content .system-docking-manage-area-select{
+    width: 130px;
+    height: 25px;
+}
+.body-wrap .info-wrap{
+    color: #a1a1a1;
+    line-height: 140px;
+}

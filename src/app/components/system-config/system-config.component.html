@@ -1,0 +1,240 @@
+<div class="system-config-wrap">
+    <div class="head-title">
+        <h4>后台系统配置信息</h4>
+        <p>系统配置相关选项值</p>
+    </div>
+    <div class="config-body">
+        <div class="first-wrap">
+            <div class="first-head">1、消息设置</div>
+            <div class="first-body">
+        <span class="open-system-info">
+          系统消息是否开启：
+          <el-radio-group [(model)]="systemInfo">
+            <el-radio label="1">是</el-radio>
+            <el-radio label="2">否</el-radio>
+          </el-radio-group>
+        </span>
+                <span class="open-small-window">
+          收到消息是否弹出小窗口：
+          <el-radio-group [(model)]="smallWindow">
+            <el-radio label="1">是</el-radio>
+            <el-radio label="2">否</el-radio>
+          </el-radio-group>
+        </span>
+                <span class="open-order-remind">
+          预约提醒是否开启：
+          <el-radio-group [(model)]="orderRemind">
+            <el-radio label="1">是</el-radio>
+            <el-radio label="2">否</el-radio>
+          </el-radio-group>
+        </span>
+                <span class="open-order-window">
+          预约提醒是否弹出小窗口：
+          <el-radio-group [(model)]="orderWindow">
+            <el-radio label="1">是</el-radio>
+            <el-radio label="2">否</el-radio>
+          </el-radio-group>
+        </span>
+            </div>
+        </div>
+        <div class="second-wrap">
+            <div class="second-head">2、文件设置</div>
+            <div class="second-body">
+                <div class="file-format">
+                    上传文件格式：
+                    <span class="document-class">
+            <el-checkbox-group [(model)]="fileFormat">
+              <el-checkbox label="docx"></el-checkbox>
+              <el-checkbox label="txt"></el-checkbox>
+              <el-checkbox label="xls"></el-checkbox>
+            </el-checkbox-group>
+            文档类
+          </span>
+                    <span class="other-class">
+            <el-checkbox-group [(model)]="fileFormat">
+              <el-checkbox label="pdf"></el-checkbox>
+            </el-checkbox-group>
+          </span>
+                    <span class="compress-class">
+            <el-checkbox-group [(model)]="fileFormat">
+              <el-checkbox label="rar"></el-checkbox>
+              <el-checkbox label="zip"></el-checkbox>
+            </el-checkbox-group>
+            压缩类
+          </span>
+                </div>
+                <div class="file-size">
+                    上传文件大小不超过：
+                    <el-radio-group [(model)]="fileSize">
+                        <el-radio label="1">10M</el-radio>
+                        <el-radio label="2">5M</el-radio>
+                        <el-radio label="3">2M</el-radio>
+                    </el-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="third-wrap">
+            <div class="third-head">3、图片设置</div>
+            <div class="third-body">
+                <div class="img-size">
+                    图片大小：
+                    <el-radio-group [(model)]="imgSize">
+                        <el-radio label="1">2M</el-radio>
+                        <el-radio label="2">1M</el-radio>
+                        <el-radio label="3">0.5M</el-radio>
+                    </el-radio-group>
+                </div>
+                <div class="img-wrap">
+                    图片格式：
+                    <span class="img-format">
+            <el-checkbox-group [(model)]="imgFormat">
+              <el-checkbox label="bmp"></el-checkbox>
+              <el-checkbox label="png"></el-checkbox>
+              <el-checkbox label="gif"></el-checkbox>
+              <el-checkbox label="jpg"></el-checkbox>
+            </el-checkbox-group>
+            图片类
+          </span>
+                </div>
+            </div>
+        </div>
+        <div class="forth-wrap">
+            <div class="forth-head">4、数据库备份设置</div>
+            <div class="forth-body">
+                <div class="auto-backup">
+                    <p>数据库自动备份：</p>
+                    <div class="week-backup">
+                        <span class="time">每周自动备份时间</span>
+
+                    </div>
+                    <div class="day-backup">
+                        <span class="time">每日自动备份时间</span>
+
+                    </div>
+                    <div class="database">
+                        <span class="name">数据库名:</span>
+                        <span>{{autoDatabaseName}}</span>
+                        <el-button type="text" (click)="downloadAutoDatabase()">下载</el-button>
+                    </div>
+                </div>
+                <div class="manual-backup">
+                    <p>数据库手动备份：</p>
+                    <div class="backup-now">
+                        是否现在：
+                        <el-button (click)="beginManualBackup()" size="mini">备份开始</el-button>
+                    </div>
+                    <div class="database">
+                        <span class="name">数据库名:</span>
+                        <span>{{manualDatabaseName}}</span>
+                        <el-button type="text" (click)="downloadManualDatabase()">下载</el-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="five-wrap">
+            <div class="five-head">5、短信设置</div>
+            <div class="five-body">
+        <span class="auto-send-msg">
+          是否自动发短信：
+          <el-radio-group [(model)]="autoSendMsg">
+            <el-radio label="1">是</el-radio>
+            <el-radio label="2">否</el-radio>
+          </el-radio-group>
+        </span>
+                <span class="all-send-msg">
+          是否群发短信：
+          <el-radio-group [(model)]="allSendMsg">
+            <el-radio label="1">是</el-radio>
+            <el-radio label="2">否</el-radio>
+          </el-radio-group>
+        </span>
+                <span class="bind-msisdn">
+          绑定手机号：
+          <span class="msisdn-input">
+            <el-input [(model)]="inputMsisdn" placeholder="请输入内容" size="mini"></el-input>
+          </span>
+          <span class="msisdn-test-btn">
+            <el-button (click)="testMsisdn()" size="mini">测试</el-button>
+          </span>
+        </span>
+            </div>
+            <div class="five-wrap-btn">
+                <el-button type="info" (click)="confirmBindMsisdn()" size="small">确定</el-button>
+            </div>
+        </div>
+        <div class="six-wrap">
+            <div class="six-head">6、邮件设置</div>
+            <div class="six-body">
+                <div class="email-send-format">
+                    邮件发送方式：
+                    <el-radio-group [(model)]="emailSendFormat">
+                        <el-radio label="1">使用外部SMTP发送</el-radio>
+                        <el-radio label="2">使用本地服务器发送</el-radio>
+                    </el-radio-group>
+                </div>
+                <div class="main-send-email">
+                    <span class="key-width">发信人邮箱：</span>
+                    <el-input class="value-width" [(model)]="mainSendEmail" placeholder="请输入内容" size="mini"></el-input>
+                </div>
+                <div class="smtp-address">
+                    <span class="key-width">SMTP服务器地址：</span>
+                    <el-input class="value-width" [(model)]="SMTPAddress" placeholder="请输入内容" size="mini"></el-input>
+                </div>
+                <div class="smtp-port">
+                    <span class="key-width">SMTP服务器端口：</span>
+                    <el-input class="value-width" [(model)]="SMTPPort" placeholder="请输入内容" size="mini"></el-input>
+                </div>
+                <div class="smtp-username">
+                    <span class="key-width">SMTP用户名：</span>
+                    <el-input class="value-width" [(model)]="SMTPUsername" placeholder="请输入内容" size="mini"></el-input>
+                </div>
+                <div class="smtp-password">
+                    <span class="key-width">SMTP密码：</span>
+                    <el-input class="value-width" [(model)]="SMTPPassword" placeholder="请输入内容" size="mini"></el-input>
+                </div>
+                <span class="test-smtp-btn">
+          <el-button (click)="testSMTP()" size="mini">测试</el-button>
+        </span>
+            </div>
+            <div class="six-wrap-btn">
+                <el-button type="info" (click)="confirmSetSMTP()" size="small">确定</el-button>
+            </div>
+        </div>
+        <div class="seven-wrap">
+            <div class="seven-head">7、提醒设置</div>
+            <div class="seven-body">
+                <div class="order-remind-value">
+                    1、预约提醒值：
+                    <span class="order-remind-select">
+            <el-select [(model)]="orderRemindValue" size="mini">
+              <el-option *ngFor="let item of orderRemindArr" [label]="item.label" [value]="item.value"></el-option>
+            </el-select>
+          </span>
+                    小时
+                </div>
+                <div class="business-remind-value">
+                    2、商机提醒值：
+                    <span class="business-remind-select">
+            <el-select [(model)]="businessRemindValue" size="mini">
+              <el-option *ngFor="let item of businessRemindArr" [label]="item.label" [value]="item.value"></el-option>
+            </el-select>
+          </span>
+                    天
+                </div>
+                <div class="contract-remind-value">
+                    3、合同提醒值：
+                    <span class="contract-remind-select">
+            <el-select [(model)]="contractRemindValue" size="mini">
+              <el-option *ngFor="let item of contractRemindArr" [label]="item.label" [value]="item.value"></el-option>
+            </el-select>
+          </span>
+                    天
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="config-btn">
+        <el-button type="primary" (click)="saveSystemConfig()">确定保存</el-button>
+        <el-button type="info" (click)="cancelSystemConfig()">取消</el-button>
+    </div>
+</div>

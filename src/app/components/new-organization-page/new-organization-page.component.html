@@ -1,0 +1,162 @@
+<div class="new-organization-pages">
+    <div class="header-wrap">
+        <div class="header-title">创建机构信息</div>
+        <div class="header-follow">
+            <span class="title">基本信息</span>
+            <span class="info">注：带有*为必填项</span>
+        </div>
+    </div>
+    <div class="table-input-wrap">
+        <el-form size="small" [show-icon]="true" [show-message]="true" el-class="form-demo">
+
+            <el-form-item label="机构名称：" [required]="true" class="new-organization-name">
+                <el-input formControlName="organizationName" class="new-organization-name-input" size="small"></el-input>
+                <el-button type="info" class="new-organization-name-btn" size="mini">查询</el-button>
+            </el-form-item>
+
+            <el-form-item label="机构地址：" [required]="true">
+                <el-input formControlName="organizationAddress" class="new-organization-address-input" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item label="联系人：" [required]="true">
+                <el-input formControlName="lxr" class="new-organization-width182-input" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item label="手机：" [required]="true">
+                <el-input formControlName="msisdn" class="new-organization-width182-input" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item label="电话：" [required]="true">
+                <el-input formControlName="telephone" class="new-organization-width182-input" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item label="国家：">
+                <el-input formControlName="gj" class="new-organization-width182-input" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item label="省份：" [required]="true">
+                <el-input formControlName="sf" class="new-organization-width182-input" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item label="市名：" [required]="true">
+                <el-input formControlName="sm" class="new-organization-width182-input" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item label="邮编：">
+                <el-input formControlName="yb" class="new-organization-width182-input" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item label="网站：">
+                <el-input formControlName="wz" class="new-organization-wz-input" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item label="机构级别：" [required]="true">
+                <el-select [model]="jgjb" formControlName="jgjb" class="new-organization-width116-form" size="small">
+                    <el-option *ngFor="let item of jgjbArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="行业类别：" [required]="true">
+                <el-select [model]="hylb" formControlName="hylb" class="new-organization-width116-form" size="small">
+                    <el-option *ngFor="let item of hylbArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="重要级别：" [required]="true">
+                <el-select [model]="zyjb" formControlName="zyjb" class="new-organization-width116-form" size="small">
+                    <el-option *ngFor="let item of zyjbArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="单位等级：" [required]="true">
+                <el-select [model]="dwdj" formControlName="dwdj" class="new-organization-width116-form" size="small">
+                    <el-option *ngFor="let item of dwdjArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="区域等级：" [required]="true">
+                <el-select [model]="qydj" formControlName="qydj" class="new-organization-width116-form" size="small">
+                    <el-option *ngFor="let item of qudjArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <div class="new-organization-other-info">其他信息</div>
+
+            <el-form-item label="经办人：" [required]="true">
+                <el-input formControlName="jbr" size="small" class="new-organization-jbr-input"></el-input>
+            </el-form-item>
+
+            <el-form-item label="年费：">
+                <el-input formControlName="nf" size="small" class="new-organization-width139-input"></el-input>
+                万
+            </el-form-item>
+
+            <el-form-item label="电子资源经费：">
+                <el-input formControlName="dzzyjf" size="small" class="new-organization-width139-input"></el-input>
+                万
+            </el-form-item>
+
+            <el-form-item label="采购时间：">
+                <el-input formControlName="cgsj" size="small" class="new-organization-width139-input"></el-input>
+            </el-form-item>
+
+            <el-form-item label="采购级别：">
+                <el-select [model]="cgjb" formControlName="cgjb" class="new-organization-width139-input" size="small">
+                    <el-option *ngFor="let item of cgjbArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="采购方式：">
+                <el-select [model]="cgfs" formControlName="cgfs" class="new-organization-width139-input" size="small">
+                    <el-option *ngFor="let item of cgfsArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="采购途径：">
+                <el-select [model]="cgtj" formControlName="cgtj" class="new-organization-width139-input" size="small">
+                    <el-option *ngFor="let item of cgtjArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="分配情况：" [required]="true">
+                <el-select [model]="fpqk" formControlName="fpqk" class="new-organization-width139-input" size="small">
+                    <el-option *ngFor="let item of fpqkArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="审核状态：" [required]="true">
+                <el-select [model]="shzt" formControlName="shzt" class="new-organization-width139-input" size="small">
+                    <el-option *ngFor="let item of shztArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="机构类型：" [required]="true">
+                <el-select [model]="jglx" formControlName="jglx" class="new-organization-width139-input" size="small">
+                    <el-option *ngFor="let item of jglxArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="跟近状态：" [required]="true">
+                <el-select [model]="newOrganization_gjzt" formControlName="gjzt" class="new-organization-width139-input" size="small">
+                    <el-option *ngFor="let item of newOrganization_gjztArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="备注信息：">
+                <el-input type="textarea" [autosize]="{ minRows: 6, maxRows: 6}" formControlName="bzxx" size="small"
+                          class="new-organization-bzxx-input"></el-input>
+            </el-form-item>
+
+            <el-form-item label="添加标签：" class="organization-label">
+                <el-input formControlName="label" class="new-organization-label-input" size="small"></el-input>
+                <el-button class="new-organization-label-btn" size="mini">+</el-button>
+            </el-form-item>
+
+            <el-form-item class="new-organization-btn-wrap">
+                <el-button type="primary" (click)="submit()">确定</el-button>
+                <el-button type="info" (click)="cancel()">取消</el-button>
+            </el-form-item>
+
+        </el-form>
+    </div>
+</div>

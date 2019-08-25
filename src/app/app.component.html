@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div el-container direction="vertical" id="crm-container">
+    <app-header [loginFlag]="loginFlag"></app-header>
+    <div el-container>
+        <div el-aside id="crm-aside" *ngIf="loginFlag">
+            <app-left-aside></app-left-aside>
+        </div>
+        <div el-main id="crm-main">
+            <!--此处是路由动态加载组件的地方-->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

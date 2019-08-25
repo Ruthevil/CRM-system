@@ -1,0 +1,50 @@
+<div class="new-user-pages">
+    <div class="header-wrap">
+        <div class="header-title">创建用户资料信息</div>
+        <div class="header-follow">
+            <span class="title">管理用户基本信息</span>
+            <span class="info">注：带有*为必填项</span>
+        </div>
+    </div>
+    <div class="form-input-wrap">
+        <el-form size="small" [show-icon]="true" [show-message]="true" el-class="form-demo">
+            <div class="content-wrap">
+                <div class="left-wrap">
+                    <el-form-item label="用户名：" [required]="true">
+                        <el-input formControlName="userName" class="new-user-width185-input" size="small"></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="密码：" [required]="true">
+                        <el-input formControlName="password" class="new-user-width185-input" size="small"></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="员工姓名：" [required]="true">
+                        <el-input formControlName="employeeName" class="new-user-width185-input" size="small"></el-input>
+                        <el-button class="new-search-user-btn" size="small" (click)="searchUser()">查询</el-button>
+                    </el-form-item>
+                </div>
+                <div class="right-wrap">
+                    <el-form-item label="部门名称：" [required]="true">
+                        <el-select [model]="departName" formControlName="departName" class="new-user-width185-input" size="small">
+                            <el-option *ngFor="let item of departNameArr" [label]="item.label" [value]="item.value"></el-option>
+                        </el-select>
+                    </el-form-item>
+
+                    <el-form-item label="职位名称：" [required]="true">
+                        <el-input formControlName="jobName" class="new-user-width185-input" size="small"></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="职务类别：" [required]="true">
+                        <el-select [model]="jobCategory" formControlName="jobCategory" class="new-user-width185-input" size="small">
+                            <el-option *ngFor="let item of jobCategoryArr" [label]="item.label" [value]="item.value"></el-option>
+                        </el-select>
+                    </el-form-item>
+                </div>
+            </div>
+            <el-form-item class="new-user-btn-wrap">
+                <el-button type="primary" (click)="submit()">确定</el-button>
+                <el-button type="info" (click)="cancel()">取消</el-button>
+            </el-form-item>
+        </el-form>
+    </div>
+</div>

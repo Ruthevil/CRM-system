@@ -1,0 +1,221 @@
+.system-config-wrap{
+    padding-bottom: 50px;
+}
+.head-title{
+    border-bottom: 1px solid #d7d7d7;
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-bottom: 5px;
+}
+.head-title h4{
+    text-align: center;
+    margin-bottom: 0px;
+}
+.head-title p{
+    margin-bottom: 0px;
+}
+.config-body{
+    padding-top: 20px;
+    position: relative;
+}
+.first-wrap{
+    margin-left: 30px;
+}
+.first-head{
+
+}
+.first-body{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+.first-body .open-system-info,
+.first-body .open-small-window,
+.first-body .open-order-remind,
+.first-body .open-order-window{
+    width: 50%;
+    margin: 10px 0;
+}
+.second-wrap{
+    margin-left: 30px;
+}
+.second-head{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.second-body{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.second-body .file-format{
+    display: flex;
+}
+.second-body .file-format .document-class,
+.second-body .file-format .compress-class{
+    text-align: center;
+}
+.second-body .file-format .other-class{
+    margin: 0 20px;
+}
+.second-body .file-size{
+    margin-top: 20px;
+}
+.third-wrap{
+    margin-left: 30px;
+}
+.third-head{
+
+}
+.third-body{
+    display: flex;
+    justify-content: space-between;
+    width: 63%;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+.third-body .img-wrap{
+    display: flex;
+}
+.third-body .img-wrap .img-format{
+    text-align: center;
+}
+.forth-wrap{
+    margin-left: 30px;
+}
+.forth-head{
+
+}
+.forth-body{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.forth-body .auto-backup,
+.forth-body .manual-backup{
+    border: 1px solid #d7d7d7;
+    padding: 5px 10px 10px 10px;
+}
+.forth-body .auto-backup .week-backup,
+.forth-body .auto-backup .day-backup,
+.forth-body .auto-backup .database{
+    margin-left: 30px;
+}
+.forth-body .manual-backup .backup-now,
+.forth-body .manual-backup .database{
+    margin-left: 50px;
+}
+.five-wrap{
+    margin-left: 30px;
+}
+.five-head{
+
+}
+.five-body{
+    display: flex;
+    width: 55%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.five-body .bind-msisdn{
+    display: flex;
+    margin-top: 20px;
+}
+.five-body .bind-msisdn .msisdn-input{
+    width: 185px;
+}
+.five-body .bind-msisdn .msisdn-test-btn{
+    margin-left: 10px;
+}
+.five-wrap-btn{
+    width: 40%;
+    text-align: center;
+    margin-top: 10px;
+}
+.six-wrap{
+    display: inline-block;
+    width: 590px;
+    margin-left: 30px;
+}
+.six-head{
+
+}
+.six-body{
+    padding-top: 20px;
+    position: relative;
+}
+.six-body .email-send-format{
+    padding-left: 45px;
+}
+.six-body .main-send-email,
+.six-body .smtp-address,
+.six-body .smtp-port,
+.six-body .smtp-username,
+.six-body .smtp-password{
+    display: flex;
+}
+.six-body .email-send-format,
+.six-body .main-send-email,
+.six-body .smtp-address,
+.six-body .smtp-port,
+.six-body .smtp-username,
+.six-body .smtp-password{
+    height: 40px;
+    line-height: 40px;
+}
+.six-body .key-width{
+    width: 140px;
+    text-align: end;
+}
+.six-body .value-width{
+    width: 280px;
+}
+.six-body .test-smtp-btn{
+    position: absolute;
+    right: 0px;
+    bottom: 30%;
+}
+.six-wrap-btn{
+    text-align: center;
+}
+.six-wrap-btn button{
+    background-color: #aeaeae;
+    color: #0066ff;
+}
+.seven-wrap{
+    display: inline-block;
+    margin-left: 30px;
+    position: absolute;
+    right: 15%;
+    bottom: 12%;
+}
+.seven-head{
+
+}
+.seven-body{
+    margin-left: 50px;
+}
+.seven-body .order-remind-value,
+.seven-body .business-remind-value,
+.seven-body .contract-remind-value{
+    margin: 20px 0;
+}
+.seven-body .order-remind-select,
+.seven-body .business-remind-select,
+.seven-body .contract-remind-select{
+    width: 115px;
+}
+.config-btn{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}

@@ -1,0 +1,59 @@
+<div class="organization-info-page">
+    <div class="header-wrap">
+        <div class="header-title">机构信息列表</div>
+        <div class="operate-wrap">
+            <div class="left-wrap">
+                <el-button size="small" (click)="toggleNewOrganization()">新增机构</el-button>
+                <el-button size="small" (click)="toggleContractInfo()">联系人</el-button>
+            </div>
+            <div class="right-wrap">
+        <span class="input">
+          <el-input [model]="inputOrganizationValue" placeholder="请输入关键字" size="mini"></el-input>
+        </span>
+                <span class="select">
+          <el-select [model]="selectOrganizationValue" size="mini">
+            <el-option *ngFor="let item of selectOrganizationArr" [label]="item.label" [value]="item.value">
+            </el-option>
+          </el-select>
+        </span>
+                <el-button size="small" (click)="searchOrganization()">查询</el-button>
+            </div>
+        </div>
+    </div>
+    <div class="table-wrap">
+        <el-table [model]="organizationTableData" [stripe]="true" [border]="true" [center]="organizationTableCenter" [scroll-x]="false">
+            <el-table-column label="□" width="40">
+                <ng-template #slot let-scope="scope">
+                    <el-checkbox [model]="" (click)="selectOrganization(scope)"></el-checkbox>
+                </ng-template>
+            </el-table-column>
+            <el-table-column model-key="bh" label="编号" width="95">
+            </el-table-column>
+            <el-table-column model-key="jgmc" label="机构名称" width="320">
+            </el-table-column>
+            <el-table-column model-key="jgjb" label="机构级别" width="150">
+            </el-table-column>
+            <el-table-column model-key="sfs" label="省份/市" width="150">
+            </el-table-column>
+            <el-table-column model-key="jbr" label="经办人" width="120">
+            </el-table-column>
+            <el-table-column model-key="lxr" label="联系人" width="120">
+            </el-table-column>
+            <el-table-column model-key="shzt" label="审核状态" width="120">
+            </el-table-column>
+            <el-table-column label="操作" width="160">
+                <ng-template #slot let-scope="scope">
+                    <el-button type="text" size="small" (click)="toggleEditOrganizationPage(scope)">编辑</el-button>
+                    <el-button type="text" size="small" (click)="deleteOrganization(scope)">删除</el-button>
+                    <el-button type="text" size="small" (click)="toggleLookOrganizationPage(scope)">查看</el-button>
+                </ng-template>
+            </el-table-column>
+        </el-table>
+    </div>
+    <div class="pages-wrap">
+        <el-pagination [total]="organizationPagination.totalCount" [model]="organizationPagination.currentPage"
+                       [page-size]="organizationPagination.pageSize" [page-count]="organizationPagination.pageCount"
+                       [page-sizes]="organizationPagination.pageSizes" [layout]="organizationPagination.layOut">
+        </el-pagination>
+    </div>
+</div>

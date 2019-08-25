@@ -1,0 +1,37 @@
+<div el-header class="header-wrap" *ngIf="loginFlag">
+    <!--logo部分-->
+    <div class="logo-wrap">
+        <span class="text-blue">客户资源管理系统CRM</span>
+    </div>
+    <!--左侧部分-->
+    <div class="left-wrap">
+    <span class="right-manage-wrap" (click)="openUserRightsPage()">
+      <i class="fa fa-lock"></i>
+      <span class="right-manage">权限管理</span>
+    </span>
+        <span class="user-manage-wrap" (click)="openUserManagePage()">
+      <i class="fa fa-group"></i>
+      <span class="user-manage">用户管理</span>
+    </span>
+        <span class="system-log-wrap" (click)="openSystemLogPage()">
+      <i class="fa fa-calendar"></i>
+      <span class="system-log">系统日志</span>
+    </span>
+    </div>
+    <!--右侧部分-->
+    <div class="right-wrap">
+    <span class="online-user-wrap">
+      <i class="fa fa-user-circle"></i>
+      <span class="online-user">在线人数</span>
+      <span class="online-num">130</span>
+    </span>
+        <span class="system-info-wrap" (click)="openSystemInfoPage()">
+      <i class="fa fa-bell-o"></i>
+      <span class="system-info">系统消息</span>
+    </span>
+        <el-dropdown trigger="click" menu-align="end" [model]="userDropData" (selected)="getSelect($event)">
+            <i class="fa fa-user"></i>
+            <span class="user">用户</span>
+        </el-dropdown>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<el-menu model="{{currentIndex}}" background-color="#1b2637" text-color="#ffffff" active-text-color="#0066ff">
+    <!--此处ng-container标签是一个虚拟的标签，不会被渲染，是用来避免*ngFor和*ngIf放在同一标签上冲突-->
+    <ng-container *ngFor="let item of menuArr">
+        <div *ngIf="!item.subMenu.length" [routerLink]="item.routerLinker">
+            <el-menu-item [index]="item.index" class="menu-item">
+                <i [class]="item.iClass"></i>{{item.name}}
+            </el-menu-item>
+        </div>
+
+        <el-submenu *ngIf="item.subMenu.length" [index]="item.index">
+            <ng-template #title>
+                <i [class]="item.iClass"></i>{{item.name}}
+            </ng-template>
+            <div *ngFor="let subItem of item.subMenu" [routerLink]="subItem.routerLinker">
+                <el-menu-item [index]="subItem.index" class="menu-item">
+                    <i [class]="subItem.iClass"></i>{{subItem.name}}
+                </el-menu-item>
+            </div>
+        </el-submenu>
+    </ng-container>
+</el-menu>

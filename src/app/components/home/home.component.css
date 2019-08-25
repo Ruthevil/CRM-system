@@ -1,0 +1,121 @@
+.home-template{
+
+}
+.total-count-wrap{
+    display: flex;
+    justify-content: space-around;
+    height: 75px;
+    line-height: 75px;
+    border-bottom: 1px solid #d7d7d7;
+}
+.total-count-item{
+
+}
+.total-count-item .fa,
+.total-count-item .num{
+    color: #03b4fd;
+}
+.total-count-item .name{
+    color: #939393;
+}
+.today-count-wrap{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    border-bottom: 1px solid #d7d7d7;
+}
+.today-count-item{
+    display: flex;
+}
+.today-count-item .fa,
+.today-count-item .num{
+    color: #7fddcd;
+}
+.today-count-item .name{
+    color: #4b4b4b;
+}
+.today-count-item .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.total-to-do-wrap{
+    height: 190px;
+    border-bottom: 1px solid #d7d7d7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.total-to-do-title{
+    text-align: center;
+    color: #949494;
+}
+.total-to-do-list{
+    display: flex;
+    justify-content: space-around;
+}
+.total-to-do-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.total-to-do-item:nth-child(1) .fa{
+    color: #33475f;
+}
+.total-to-do-item:nth-child(2) .fa{
+    color: #9d55b8;
+}
+.total-to-do-item:nth-child(3) .fa{
+    color: #56abe4;
+}
+.total-to-do-item:nth-child(4) .fa{
+    color: #00bb9c;
+}
+.total-to-do-item:nth-child(5) .fa{
+    color: #eb4f38;
+}
+.total-to-do-item:nth-child(6) .fa{
+    color: #f4c602;
+}
+.total-to-do-item .name{
+    color: #a3a3a3;
+}
+.today-to-do-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.today-to-do-item{
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+.today-to-do-item:nth-child(1) .fa{
+    color: #ff6600;
+}
+.today-to-do-item:nth-child(2) .fa{
+    color: #0099ff;
+}
+.today-to-do-item:nth-child(3) .fa{
+    color: #9933cc;
+}
+.task-type-title{
+    color: #000000;
+}
+.task-type-title span{
+    color: #90d3ff;
+}
+.today-type-wrap{
+    display: flex;
+    justify-content: space-around;
+}
+.task-type-item{
+
+}
+.task-type-item .name,
+.task-type-item .type{
+    color: #939393;
+}
+.task-type-item .num{
+    color: #90d3ff;
+}

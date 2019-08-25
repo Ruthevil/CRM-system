@@ -1,0 +1,69 @@
+<div class="user-detail-page">
+    <div class="header-wrap">用户资料信息详情</div>
+    <div class="body-wrap">
+        <div class="basic-info-wrap">
+            <p class="title">管理用户基本信息</p>
+            <div class="basic-content content">
+                <div class="left-wrap">
+                    <p class="user-name"><span class="key">用户名：</span><span class="value">{{userName}}</span></p>
+                    <p class="password"><span class="key">密码：</span><span class="value">{{password}}</span></p>
+                    <p class="admin-classification"><span class="key">管理员分类：</span><span class="value">{{adminClassification}}</span></p>
+                    <p class="depart-name"><span class="key">部门名称：</span><span class="value">{{departName}}</span></p>
+                </div>
+                <div class="right-wrap">
+                    <p class="employee-name"><span class="key">员工姓名：</span><span class="value">{{employeeName}}</span></p>
+                    <p class="job-name"><span class="key">职位名称：</span><span class="value">{{jobName}}</span></p>
+                    <p class="job-category"><span class="key">职务类别：</span><span class="value">{{jobCategory}}</span></p>
+                    <p class="accredit-status"><span class="key">授权状态：</span><span class="value">{{accreditStatus}}</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="user-accredit-wrap">
+            <p class="title">用户授权设置</p>
+            <div class="other-content content">
+                <div class="left-wrap">
+                    <p class="column-authority">
+                        <span class="key">1、栏目权限：</span>
+                        <span class="value">注：下方栏目频道，即授权给用户登录后看到栏目频道</span>
+                    </p>
+                    <p class="column-authority-content">
+                        <span class="item-column">机构管理</span>
+                        <span class="item-column">信息管理</span>
+                        <span class="item-column">商机管理</span>
+                        <span class="item-column">日志管理</span>
+                        <span class="item-column">产品管理</span>
+                        <span class="item-column">合同管理</span>
+                        <span class="item-column">预约管理</span>
+                        <span class="item-column">售后日志</span>
+                        <span class="item-column">任务清单</span>
+                        <span class="item-column">员工管理</span>
+                        <span class="item-column">资料库管理管理</span>
+                        <span class="item-column">统计分析</span>
+                        <span class="item-column">系统对接管理</span>
+                        <span class="item-column">权限管理</span>
+                        <span class="item-column">系统配置</span>
+                        <span class="item-column">用户管理</span>
+                        <span class="item-column">系统日志</span>
+                    </p>
+                </div>
+                <div class="right-wrap">
+                    <p class="function-authority">
+                        <span class="key">2、操作功能权限：</span>
+                        <span class="value">注：下方功能，即用户操作功能</span>
+                    </p>
+                    <p class="function-authority-content">
+                        <span class="item-function">创建</span>
+                        <span class="item-function">编辑</span>
+                        <span class="item-function">删除</span>
+                        <span class="item-function">查看</span>
+                        <span class="item-function">搜索</span>
+                        <span class="item-function">授权</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrap">
+        <el-button class="detail-close-btn">关闭</el-button>
+    </div>
+</div>

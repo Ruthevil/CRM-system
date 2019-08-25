@@ -1,0 +1,56 @@
+.business-detail-template{
+    padding-bottom: 100px;
+}
+.header-wrap{
+    height: 75px;
+    text-align: center;
+}
+.body-wrap{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.body-wrap .title{
+    height: 40px;
+    line-height: 40px;
+    color: #333333;
+    font-size: 14px;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 0;
+}
+.body-wrap .left-wrap,
+.body-wrap .right-wrap{
+    width: 50%;
+}
+.body-wrap .key{
+    text-align: end;
+    width: 80px;
+    display: inline-block;
+    font-size: 14px;
+    color: #6d6868;
+}
+.body-wrap .value{
+    color: #000000;
+}
+.body-wrap .content{
+    padding-top: 10px;
+    display: flex;
+}
+.body-wrap .basic-info-wrap .basic-content{
+    height: 330px;
+}
+.body-wrap .other-info-wrap .other-content{
+    height: 280px;
+}
+.body-wrap .basic-info-wrap .basic-content .left-wrap .lxr .count{
+    color: #a3a3a3;
+    margin-left: 25px;
+}
+.body-wrap .basic-info-wrap .basic-content .left-wrap .lxr .count span,
+.body-wrap .other-info-wrap .other-content .right-wrap .htxx,
+.body-wrap .other-info-wrap .other-content .right-wrap .cpxx{
+    color: #0099ff;
+}
+.footer-wrap{
+    text-align: center;
+    margin-top: 50px;
+}

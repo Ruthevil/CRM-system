@@ -1,0 +1,71 @@
+<div class="system-docking-manage">
+    <div class="header-wrap">系统对接管理</div>
+    <div class="body-wrap">
+        <div class="task-system-wrap">
+            <div class="docking-wrap">
+                <p class="title">任务系统对接区</p>
+                <p class="username"><span class="key">用户名：</span><input type="text" class="value"></p>
+                <p class="password"><span class="key">密码：</span><input type="text" class="value"></p>
+                <p class="btn"><el-button class="system-docking-manage-login-btn">登录</el-button></p>
+            </div>
+            <div class="search-wrap">
+                <p class="title">任务系统查询区</p>
+                <p class="content">
+                    <input type="text" class="key-word" placeholder="请输入关键字">
+                    <el-select [model]="taskAreaArr[0].value" class="system-docking-manage-area-select" size="mini">
+                        <el-option *ngFor="let item of taskAreaArr" [label]="item.label" [value]="item.value">
+                        </el-option>
+                    </el-select>
+                    <el-button class="system-docking-manage-search-btn" size="mini">查询</el-button>
+                </p>
+            </div>
+        </div>
+        <div class="done-system-wrap">
+            <div class="docking-wrap">
+                <p class="title">实施系统对接区</p>
+                <p class="username"><span class="key">用户名：</span><input type="text" class="value"></p>
+                <p class="password"><span class="key">密码：</span><input type="text" class="value"></p>
+                <p class="btn"><el-button class="system-docking-manage-login-btn">登录</el-button></p>
+            </div>
+            <div class="search-wrap">
+                <p class="title">实施系统查询区</p>
+                <p class="content">
+                    <input type="text" class="key-word" placeholder="请输入关键字">
+                    <el-select [model]="doneAreaArr[0].value" class="system-docking-manage-area-select" size="mini">
+                        <el-option *ngFor="let item of doneAreaArr" [label]="item.label" [value]="item.value">
+                        </el-option>
+                    </el-select>
+                    <el-button class="system-docking-manage-search-btn" size="mini">查询</el-button>
+                </p>
+            </div>
+        </div>
+        <div class="oa-system-wrap">
+            <div class="docking-wrap">
+                <p class="title">资源OA系统对接区</p>
+                <p class="username"><span class="key">用户名：</span><input type="text" class="value"></p>
+                <p class="password"><span class="key">密码：</span><input type="text" class="value"></p>
+                <p class="btn"><el-button class="system-docking-manage-login-btn">登录</el-button></p>
+            </div>
+            <div class="search-wrap">
+                <p class="title">资源OA系统查询区</p>
+                <p class="content">
+                    <input type="text" class="key-word" placeholder="请输入关键字">
+                    <el-select [model]="oaAreaArr[0].value" class="system-docking-manage-area-select" size="mini">
+                        <el-option *ngFor="let item of oaAreaArr" [label]="item.label" [value]="item.value">
+                        </el-option>
+                    </el-select>
+                    <el-button class="system-docking-manage-search-btn" size="mini">查询</el-button>
+                </p>
+            </div>
+        </div>
+        <div class="organization-system-wrap">
+            <div class="docking-wrap">
+                <p class="title">机构后台系统对接区</p>
+                <p class="username"><span class="key">用户名：</span><input type="text" class="value"></p>
+                <p class="password"><span class="key">密码：</span><input type="text" class="value"></p>
+                <p class="btn"><el-button class="system-docking-manage-login-btn">登录</el-button></p>
+            </div>
+            <div class="info-wrap">注：从此处登录机构后台管理系统，跳转到机构后台登录界面</div>
+        </div>
+    </div>
+</div>

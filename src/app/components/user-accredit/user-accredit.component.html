@@ -1,0 +1,82 @@
+<div class="user-accredit-page">
+    <div class="header-wrap">
+        <div class="header-title">用户授权信息</div>
+        <div class="header-follow">
+            <span class="title">用户授权基本信息</span>
+            <span class="info">注：带有*为必填项</span>
+        </div>
+    </div>
+    <div class="form-input-wrap">
+        <el-form size="small" [show-icon]="true" [show-message]="true" el-class="form-demo">
+            <div class="content-wrap">
+                <el-form-item label="用户名：" [required]="true">
+                    <el-input formControlName="userName" class="user-accredit-width185-input" size="small"></el-input>
+                </el-form-item>
+
+                <el-form-item label="员工姓名：">
+                    <el-input formControlName="employeeName" class="user-accredit-width185-input" size="small"></el-input>
+                    <el-button class="user-accredit-employee-btn" size="small" (click)="searchEmployee()">查询</el-button>
+                </el-form-item>
+
+                <el-form-item label="管理员分类：" [required]="true">
+                    <el-select [model]="adminCategory" formControlName="adminCategory" class="user-accredit-width185-input" size="small">
+                        <el-option *ngFor="let item of adminCategoryArr" [label]="item.label" [value]="item.value"></el-option>
+                    </el-select>
+                </el-form-item>
+
+                <el-form-item label="部门名称：">
+                    <el-input formControlName="departName" class="user-accredit-width185-input" size="small"></el-input>
+                </el-form-item>
+
+                <el-form-item label="职位名称：">
+                    <el-input formControlName="jobName" class="user-accredit-width185-input" size="small"></el-input>
+                </el-form-item>
+
+                <el-form-item label="职务类别：">
+                    <el-select [model]="jobCategory" formControlName="jobCategory" class="user-accredit-width185-input" size="small">
+                        <el-option *ngFor="let item of jobCategoryArr" [label]="item.label" [value]="item.value"></el-option>
+                    </el-select>
+                </el-form-item>
+
+                <el-form-item label="授权状态：" [required]="true">
+                    <el-select [model]="authorityStatus" formControlName="authorityStatus" class="user-accredit-width185-input" size="small">
+                        <el-option *ngFor="let item of authorityStatusArr" [label]="item.label" [value]="item.value"></el-option>
+                    </el-select>
+                </el-form-item>
+            </div>
+            <div class="user-authority-set">
+                <p class="set-title">用户权限设置</p>
+                <div class="set-content">
+                    <div class="left-wrap">
+                        <p class="column-authority">
+                            <span class="key">1、栏目权限</span>
+                            <span class="value">注：只要勾选栏目频道，即表示授权给用户登录后可看到栏目频道</span>
+                        </p>
+                        <div class="column-content content">
+                            <p class="all-select"><el-checkbox [(model)]="authorityAllSelect" label="全部选">全部选</el-checkbox></p>
+                            <el-checkbox-group class="authority-list list" (modelChange)="selectAuthority($event)">
+                                <el-checkbox *ngFor="let item of authorityList" label="{{item.label}}">{{item.value}}</el-checkbox>
+                            </el-checkbox-group>
+                        </div>
+                    </div>
+                    <div class="right-wrap">
+                        <p class="function-authority">
+                            <span class="key">2、操作功能权限</span>
+                            <span class="value">注：只要勾选的功能，即表示授权给用户操作功能授权</span>
+                        </p>
+                        <div class="function-content content">
+                            <p class="all-select"><el-checkbox [(model)]="functionAllSelect" label="全部选">全部选</el-checkbox></p>
+                            <el-checkbox-group class="function-list list" (modelChange)="selectFunction($event)">
+                                <el-checkbox *ngFor="let item of functionList" label="{{item.label}}">{{item.value}}</el-checkbox>
+                            </el-checkbox-group>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <el-form-item class="user-accredit-btn-wrap">
+                <el-button type="primary" (click)="submit()">确定</el-button>
+                <el-button type="info" (click)="cancel()">取消</el-button>
+            </el-form-item>
+        </el-form>
+    </div>
+</div>

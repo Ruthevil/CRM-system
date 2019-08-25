@@ -1,0 +1,56 @@
+.user-detail-page{
+
+}
+.header-wrap{
+    height: 75px;
+    text-align: center;
+}
+.body-wrap{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.body-wrap .title{
+    height: 40px;
+    line-height: 40px;
+    color: #333333;
+    font-size: 14px;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 0;
+}
+.body-wrap .left-wrap,
+.body-wrap .right-wrap{
+    width: 50%;
+}
+.body-wrap .key{
+    color: #868686;
+}
+.body-wrap .value{
+    color: #bcbcbc;
+}
+.body-wrap .content{
+    padding-top: 10px;
+    display: flex;
+}
+.body-wrap .basic-info-wrap .basic-content{
+    height: 200px;
+}
+.body-wrap .user-accredit-wrap .other-content{
+    padding-left: 20px;
+}
+.body-wrap .user-accredit-wrap .column-authority-content,
+.body-wrap .user-accredit-wrap .function-authority-content{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px dashed #d7d7d7;
+    padding: 10px;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.body-wrap .user-accredit-wrap .column-authority-content .item-column,
+.body-wrap .user-accredit-wrap .function-authority-content .item-function{
+    margin: 5px 25px;
+}
+.footer-wrap{
+    text-align: center;
+    margin-top: 10px;
+}

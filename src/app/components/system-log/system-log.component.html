@@ -1,0 +1,56 @@
+<div class="system-log-list-template">
+    <div class="header-wrap">
+        <div class="header-title">系统日志信息列表</div>
+        <div class="operate-wrap">
+      <span class="input">
+        <el-input [model]="inputLogValue" placeholder="请输入关键字" size="mini"></el-input>
+      </span>
+            <span class="select">
+        <el-select [model]="selectLogValue" size="mini">
+          <el-option *ngFor="let item of selectLogArr" [label]="item.label" [value]="item.value">
+          </el-option>
+        </el-select>
+      </span>
+            <el-button class="system-log-search-btn" size="small" (click)="searchLog()">查询</el-button>
+        </div>
+    </div>
+    <div class="table-wrap">
+        <el-table [model]="logTableData" [stripe]="true" [border]="true" [center]="logTableCenter" [scroll-x]="false">
+            <el-table-column label="□" width="30">
+                <ng-template #slot let-scope="scope">
+                    <el-checkbox [model]="" (click)="selectLog(scope)"></el-checkbox>
+                </ng-template>
+            </el-table-column>
+            <el-table-column model-key="bh" label="编号" width="85">
+            </el-table-column>
+            <el-table-column model-key="userName" label="用户名" width="85">
+            </el-table-column>
+            <el-table-column model-key="employeeName" label="员工姓名" width="85">
+            </el-table-column>
+            <el-table-column model-key="departName" label="部门名称" width="85">
+            </el-table-column>
+            <el-table-column model-key="moduleName" label="模块名称" width="85">
+            </el-table-column>
+            <el-table-column model-key="loginIP" label="登录IP" width="120">
+            </el-table-column>
+            <el-table-column model-key="loginTime" label="登录时间" width="150">
+            </el-table-column>
+            <el-table-column model-key="function" label="功能" width="85">
+            </el-table-column>
+            <el-table-column model-key="operateTime" label="操作时间" width="150">
+            </el-table-column>
+            <el-table-column model-key="operateStatus" label="操作状态" width="85">
+            </el-table-column>
+            <el-table-column model-key="terminalName" label="终端名称" width="85">
+            </el-table-column>
+            <el-table-column model-key="logoutTime" label="退出时间" width="150">
+            </el-table-column>
+        </el-table>
+    </div>
+    <div class="pages-wrap">
+        <el-pagination [total]="logPagination.totalCount" [model]="logPagination.currentPage"
+                       [page-size]="logPagination.pageSize" [page-count]="logPagination.pageCount"
+                       [page-sizes]="logPagination.pageSizes" [layout]="logPagination.layOut">
+        </el-pagination>
+    </div>
+</div>

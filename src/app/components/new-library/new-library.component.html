@@ -1,0 +1,49 @@
+<div class="new-library-pages">
+    <div class="header-wrap">
+        <div class="header-title">创建资料信息</div>
+        <div class="header-follow">
+            <span class="title">资料基本信息</span>
+            <span class="info">注：带有*为必填项</span>
+        </div>
+    </div>
+    <div class="form-input-wrap">
+        <el-form size="small" [show-icon]="true" [show-message]="true" el-class="form-demo">
+
+            <el-form-item label="资料名称：" [required]="true">
+                <el-input formControlName="libraryName" class="new-library-libraryName-input" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item label="资料分类：" [required]="true">
+                <el-select [model]="librarySplit" formControlName="librarySplit" class="new-library-width185-input" size="small">
+                    <el-option *ngFor="let item of librarySplitArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="文件类型：" [required]="true">
+                <el-select [model]="fileType" formControlName="fileType" class="new-library-width185-input" size="small">
+                    <el-option *ngFor="let item of fileTypeArr" [label]="item.label" [value]="item.value"></el-option>
+                </el-select>
+            </el-form-item>
+
+            <el-form-item label="上传文件：" [required]="true">
+                <el-input formControlName="uploadFile" class="new-library-uploadFile-input" size="small"></el-input>
+                <span class="upload-file-info">注：文件格式规定(不管是文档、声音、图形、动画、可执行文件等均打包压缩ZIP或RAR格式上传)</span>
+            </el-form-item>
+
+            <el-form-item label="备注：">
+                <el-input type="textarea" [autosize]="{ minRows: 2, maxRows: 4}" formControlName="bz" size="small"
+                          class="new-library-width780-input" placeholder="简单描述文件作用和使用者及部门人员"></el-input>
+            </el-form-item>
+
+            <el-form-item label="发布者：" [required]="true">
+                <el-input formControlName="publicPerson" class="new-library-width185-input publicPerson" size="small"></el-input>
+            </el-form-item>
+
+            <el-form-item class="new-library-btn-wrap">
+                <el-button type="primary" (click)="submit()">确定</el-button>
+                <el-button type="info" (click)="cancel()">取消</el-button>
+            </el-form-item>
+
+        </el-form>
+    </div>
+</div>

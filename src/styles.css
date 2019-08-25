@@ -1,0 +1,246 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~element-angular/theme/index.css";
+@import '~font-awesome/css/font-awesome.css';
+html,body{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+/*滚动条样式*/
+::-webkit-scrollbar{
+    height: 6px;
+    width: 6px;
+}
+::-webkit-scrollbar-track{
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+    background-color: #d7d7d7;
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background-color: #8eb2be;
+}
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active{
+    background-color: #a4eef0;
+}
+.el-menu-item,
+.el-submenu__title{
+    height: 40px;
+    line-height: 40px;
+}
+.el-menu-item i,
+.el-submenu__title .fa-users{
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 15px;
+}
+.el-table__body-wrapper{
+    overflow-x: hidden;
+}
+.el-form-item{
+    margin-bottom: 0;
+    display: flex;
+}
+.el-form-item--mini.el-form-item,
+.el-form-item--small.el-form-item{
+    margin-bottom: 0;
+}
+.new-contract-pages .el-form-item .el-form-item__label{
+    width: 100px;
+}
+.el-form-item .el-form-item__content{
+    display: flex;
+}
+.el-form-item .el-form-item__content .new-contract-organization-name-input{
+    width: 464px;
+}
+.el-form-item .el-form-item__content .new-contract-organization-name-btn{
+    height: 32px;
+}
+.el-form-item .el-form-item__content .new-contract-width280-input{
+    width: 280px;
+}
+.el-form-item .el-form-item__content .new-contract-address-input{
+    width: 524px;
+}
+.el-form-item .el-form-item__content .new-contract-width185-form{
+    width: 185px;
+}
+.el-form-item .el-form-item__content .new-contract-width868-input{
+    width: 868px;
+}
+.el-form-item .el-form-item__content .new-contract-xxly-input{
+    width: 504px;
+    margin: 5px 0;
+}
+el-form-item.new-contract-btn-wrap > div,
+el-form-item.new-organization-btn-wrap > div,
+el-form-item.new-employee-btn-wrap > div,
+el-form-item.new-library-btn-wrap > div,
+el-form-item.new-user-btn-wrap > div,
+el-form-item.user-accredit-btn-wrap > div,
+el-form-item.new-business-btn-wrap > div{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+el-form-item.new-contract-btn-wrap .el-form-item__content,
+el-form-item.new-organization-btn-wrap .el-form-item__content,
+el-form-item.new-employee-btn-wrap .el-form-item__content,
+el-form-item.new-library-btn-wrap .el-form-item__content,
+el-form-item.new-user-btn-wrap .el-form-item__content,
+el-form-item.user-accredit-btn-wrap .el-form-item__content,
+el-form-item.new-business-btn-wrap .el-form-item__content{
+    width: 50%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+el-form-item.new-contract-btn-wrap .el-form-item__content .el-button,
+el-form-item.new-organization-btn-wrap .el-form-item__content .el-button,
+el-form-item.new-employee-btn-wrap .el-form-item__content .el-button,
+el-form-item.new-library-btn-wrap .el-form-item__content .el-button,
+el-form-item.new-user-btn-wrap .el-form-item__content .el-button,
+el-form-item.user-accredit-btn-wrap .el-form-item__content .el-button,
+el-form-item.new-business-btn-wrap .el-form-item__content .el-button{
+    width: 140px;
+}
+.el-form-item .el-form-item__label{
+    width: 110px;
+}
+el-form-item.organization-label .organization-label-input{
+    margin-top: 5px;
+}
+el-form-item.organization-label .organization-label-btn{
+    margin-top: 10px;
+}
+.el-form-item .el-form-item__content .new-organization-name-input,
+.el-form-item .el-form-item__content .new-business-name-input{
+    width: 482px;
+}
+.el-form-item .el-form-item__content .new-organization-name-btn,
+.el-form-item .el-form-item__content .new-business-name-btn{
+    height: 30px;
+}
+.el-form-item .el-form-item__content .new-organization-address-input,
+.el-form-item .el-form-item__content .new-business-address-input{
+    width: 434px;
+}
+.el-form-item .el-form-item__content .new-organization-width182-input,
+.el-form-item .el-form-item__content .new-business-width182-input{
+    width: 182px;
+}
+.el-form-item .el-form-item__content .new-organization-wz-input,
+.el-form-item .el-form-item__content .new-business-wz-input{
+    width: 452px;
+}
+.el-form-item .el-form-item__content .new-organization-width116-form,
+.el-form-item .el-form-item__content .new-business-width116-form{
+    width: 116px;
+}
+.el-form-item .el-form-item__content .new-organization-jbr-input,
+.el-form-item .el-form-item__content .new-business-jbr-input{
+    width: 184px;
+}
+.el-form-item .el-form-item__content .new-organization-width139-input,
+.el-form-item .el-form-item__content .new-business-width139-input{
+    width: 139px;
+}
+.el-form-item .el-form-item__content .new-organization-bzxx-input,
+.el-form-item .el-form-item__content .new-business-bzxx-input{
+    width: 768px;
+}
+.el-form-item .el-form-item__content .new-organization-label-input,
+.el-form-item .el-form-item__content .new-business-label-input{
+    width: 103px;
+    margin: 5px 0;
+}
+.el-form-item .el-form-item__content .new-organization-label-btn,
+.el-form-item .el-form-item__content .new-business-label-btn{
+    height: 25px;
+    line-height: 4px;
+    margin: 15px 0 0 5px;
+    border-radius: 10px;
+    outline: none;
+}
+.el-button.detail-close-btn{
+    width: 140px;
+    height: 40px;
+    background-color: #f2f2f2;
+    color: #000000;
+    font-weight: 600;
+}
+.el-button.system-docking-manage-login-btn{
+    width: 112px;
+    height: 40px;
+    background-color: #169bd5;
+    color: #ffffff;
+}
+el-select.system-docking-manage-area-select input{
+    height: 25px!important;
+}
+.el-button.system-docking-manage-search-btn{
+    width: 60px;
+    height: 25px;
+    padding: 5px 15px;
+    background-color: #169bd5;
+    color: #ffffff;
+}
+.el-form-item .el-form-item__content .new-employee-width185-input{
+    width: 185px;
+}
+.el-form-item .el-form-item__content .new-employee-width780-input{
+    width: 780px;
+}
+.header-wrap .operate-wrap .left-wrap .el-button{
+    width: 95px;
+    background: #169bd5;
+    color: #ffffff;
+}
+.header-wrap .operate-wrap .right-wrap .el-button{
+    width: 55px;
+    background: #169bd5;
+    color: #ffffff;
+}
+.el-form-item .el-form-item__content .new-library-libraryName-input{
+    width: 495px;
+}
+.el-form-item .el-form-item__content .new-library-width185-input{
+    width: 185px;
+}
+.el-form-item .el-form-item__content .new-library-uploadFile-input{
+    width: 85px;
+}
+.el-form-item .el-form-item__content .new-library-width780-input{
+    width: 780px;
+}
+.new-user-pages .form-input-wrap .form-demo .el-form .content-wrap{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.el-form-item .el-form-item__content .new-user-width185-input{
+    width: 185px;
+}
+.el-form-item .el-form-item__content .new-search-user-btn{
+    height: 32px;
+    margin-left: 10px;
+}
+.el-form-item .el-form-item__content .user-accredit-width185-input{
+    width: 185px;
+}
+.el-form-item .el-form-item__content .user-accredit-employee-btn{
+    height: 32px;
+    margin-left: 10px;
+}
+.form-input-wrap .user-authority-set .list .el-checkbox-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-input-wrap .user-authority-set .list .el-checkbox-group .el-checkbox{
+    margin: 5px 20px;
+}
+.system-log-list-template .system-log-search-btn{
+    padding: 0px 15px;
+}

@@ -1,0 +1,59 @@
+<div class="user-info-page">
+    <div class="header-wrap">
+        <div class="header-title">用户资料信息列表</div>
+        <div class="operate-wrap">
+            <div class="left-wrap">
+                <el-button size="small" (click)="toggleNewUser()">新增用户</el-button>
+                <el-button size="small" (click)="toggleUserAccredit()">用户授权</el-button>
+            </div>
+            <div class="right-wrap">
+        <span class="input">
+          <el-input [model]="inputUserValue" placeholder="请输入关键字" size="mini"></el-input>
+        </span>
+                <span class="select">
+          <el-select [model]="selectUserValue" size="mini">
+            <el-option *ngFor="let item of selectUserArr" [label]="item.label" [value]="item.value">
+            </el-option>
+          </el-select>
+        </span>
+                <el-button size="small" (click)="searchUser()">查询</el-button>
+            </div>
+        </div>
+    </div>
+    <div class="table-wrap">
+        <el-table [model]="userTableData" [stripe]="true" [border]="true" [center]="userTableCenter" [scroll-x]="false">
+            <el-table-column label="□" width="40">
+                <ng-template #slot let-scope="scope">
+                    <el-checkbox [model]="" (click)="selectUser(scope)"></el-checkbox>
+                </ng-template>
+            </el-table-column>
+            <el-table-column model-key="bh" label="编号" width="90">
+            </el-table-column>
+            <el-table-column model-key="userName" label="用户名" width="200">
+            </el-table-column>
+            <el-table-column model-key="adminClassification" label="管理员分类" width="200">
+            </el-table-column>
+            <el-table-column model-key="employeeName" label="员工姓名" width="150">
+            </el-table-column>
+            <el-table-column model-key="departName" label="部门名称" width="150">
+            </el-table-column>
+            <el-table-column model-key="createDate" label="创建日期" width="200">
+            </el-table-column>
+            <el-table-column model-key="accreditStatus" label="授权状态" width="100">
+            </el-table-column>
+            <el-table-column label="操作" width="145">
+                <ng-template #slot let-scope="scope">
+                    <el-button type="text" size="small" (click)="toggleEditUserPage(scope)">编辑</el-button>
+                    <el-button type="text" size="small" (click)="deleteUser(scope)">删除</el-button>
+                    <el-button type="text" size="small" (click)="toggleLookUserPage(scope)">查看</el-button>
+                </ng-template>
+            </el-table-column>
+        </el-table>
+    </div>
+    <div class="pages-wrap">
+        <el-pagination [total]="userPagination.totalCount" [model]="userPagination.currentPage"
+                       [page-size]="userPagination.pageSize" [page-count]="userPagination.pageCount"
+                       [page-sizes]="userPagination.pageSizes" [layout]="userPagination.layOut">
+        </el-pagination>
+    </div>
+</div>
